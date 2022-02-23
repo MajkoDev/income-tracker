@@ -1,8 +1,11 @@
 import React from 'react'
+import IncomeItem from "./IncomeItem"
 
 const IncomeList = () => {
   return (
-    <div>IncomeList</div>
+    <div className="income-list">
+      <IncomeItem />
+    </div>
   )
 }
 

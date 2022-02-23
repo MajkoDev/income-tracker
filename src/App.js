@@ -1,12 +1,12 @@
 import Header from "./components/Header";
-import IncomeInput from "./components/IncomeInput";
+import IncomeForm from "./components/IncomeForm";
 import IncomeList from "./components/IncomeList";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <IncomeInput />
+      <IncomeForm />
       <IncomeList />
     </div>
   );
