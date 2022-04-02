@@ -5,6 +5,8 @@ const IncomeList = () => {
   return (
     <div className="income-list">
       <IncomeItem />
+      <IncomeItem />
+      <IncomeItem />
     </div>
   )
 }
