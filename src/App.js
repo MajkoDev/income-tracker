@@ -6,12 +6,26 @@ import IncomeList from "./components/IncomeList";
 
 function App() {
   const [income, setIncome] = useState([])
+  const [totalIncome, setTotalIncome] = useState(0)
+
+  // Total Income
+  // update when renders and when income changes
+  useEffect(() => {
+    let temp = 0;
+
+    for(let i = 0; i < income.length; i++) {
+      temp += parseInt(income[i].price);
+    }
+  
+    setTotalIncome(temp)
+  }, [income])
+  
 
   return (
     <div className="App">
-      <Header />
-      <IncomeForm />
-      <IncomeList />
+      <Header totalIncome={totalIncome} />
+      <IncomeForm income={income} setIncome={setIncome} />
+      <IncomeList income={income} setIncome={setIncome}/>
     </div>
   );
 }

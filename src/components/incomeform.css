@@ -1,35 +1,43 @@
-form{
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
+form {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-input{
-    height: 34px;
-    padding: 5px 15px;
-    margin: 1px;
-    border: 1px black solid;
-    border-radius: 0;
+input {
+  height: 34px;
+  padding: 5px 15px;
+  margin: 1px;
+  border: 1px black solid;
+  border-radius: 0;
+}
+.income-form {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 1000px) {
+  .income-form {
+    flex-direction: column;
+  }
 }
 
-.input-subject{
-    width: 30rem;
+.input-subject {
+  width: 30rem;
 }
-.input-amount{
-    width: 10rem;
+.input-amount {
+  width: 10rem;
 }
-.input-date{
-    width: 10rem;
+.input-date {
+  width: 10rem;
 }
 
-
-button{
-    border: 1px black solid;
-    background-color: #fff;
-    height: 34px;
-    padding: 5px 15px;
-    margin: 1px;
-    font-size: 0.9rem;
+button {
+  border: 1px black solid;
+  background-color: #fff;
+  height: 34px;
+  padding: 5px 15px;
+  margin: 1px;
+  font-size: 0.9rem;
 }

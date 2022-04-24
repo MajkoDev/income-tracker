@@ -1,14 +1,31 @@
-import React from 'react'
-import IncomeItem from "./IncomeItem"
+import React from "react";
+import IncomeItem from "./IncomeItem";
 
-const IncomeList = () => {
-  return (
-    <div className="income-list">
-      <IncomeItem />
-      <IncomeItem />
-      <IncomeItem />
-    </div>
-  )
+const IncomeList = ({ income, setIncome }) => {
+  
+  const removeIncome = i => {
+    let temp = income.filter((v, index) => index != i)
+    setIncome(temp)
 }
 
-export default IncomeList
+  const sortByDate = (a, b) => {
+    return a.date - b.date;
+  }
+
+
+  return (
+    <div className='income-list'>
+      {
+        income.sort(sortByDate).map((value, index) => (
+          <IncomeItem 
+           key={index} 
+           income={value} 
+           index={index} 
+           removeIncome={removeIncome} />
+      ))
+      }
+    </div>
+  );
+};
+
+export default IncomeList;
